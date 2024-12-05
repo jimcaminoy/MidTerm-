@@ -1,0 +1,248 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Jaro, sans-serif;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar{
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.navbar ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e4e712;
+    transition: width 1s ease-out;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(7, 100px);
+    grid-template-columns: repeat(7, 100px);
+    gap: 0.50cm;
+    width: 88vh;
+    min-height: 88vh;
+}
+
+
+.item {
+    grid-area: 1em;
+    color: rgba(226, 41, 41, 0.726);
+    text-align: center;
+    border: 4px solid rgb(255, 0, 0);
+    border-radius: 8px;
+}
+
+/*==========ITEM 1=========*/
+
+.item-1 {
+    grid-area: 1 / 1 / 3 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    color: pink;
+    background-color: #000000;
+    transition: transform .4s ease, background-color .5s ease-out, color
+    .5s ease-out;
+}
+
+.item-1:hover {
+    color: rgb(0, 217, 255);
+    background-color: black;
+}
+
+/*==========ITEM 2=========*/
+ 
+.item-2 {
+    
+    grid-area: 1 / 6 / 6 / 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: rgb(255, 0, 0);
+    background-color: black;
+}
+
+.item-2 .social-items i {
+    font-size: 2rem;
+    color: pink;
+    transition: transform 0.3s, color 0.3s ease;
+}
+
+.item-2 .social-items i:hover {
+    transform: scale(1.5);
+    color: rgb(0, 217, 255);
+}
+
+/*==========ITEM 3=========*/
+
+.item-3 {
+    grid-area: 6 / 3 / 8 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #ffffff;
+}
+
+.item-3 h2 {
+    transform: rotate(-90deg);
+    color: #ff0000;
+    font-size: 2.5em;
+}
+
+/*==========ITEM 4=========*/
+
+.item-4 {
+    grid-area: 3 / 1 / 8 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 0, 0);
+    border: transparent;
+}
+
+.item-4 {
+    font-size: 2rem;
+    color: red;
+    margin-bottom: 1em;
+}
+
+.work-image {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px  rgb(255, 0, 0);
+    transition: transform 0.5 ease;
+}
+
+.work-image:hover {
+    transform: scale(1.3);
+    margin: 30px;
+} 
+
+/*==========ITEM 5=========*/
+
+.item-5 {
+    grid-area: 3 / 3 / 6 / 6;
+    border: transparent;
+}
+ 
+.item-5 img {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px red;
+    transition: transform 0.5s ease, width 0.5s ease, border-radius 0.5s ease;
+}
+
+.item-5 img:hover {
+    transform: scale(1.1);    
+    width: 100%;
+    border-radius: 16px;
+    border: 4px red;
+}
+
+/*==========ITEM 6=========*/
+
+.item-6 {
+    grid-area: 6 / 4 / 8 / 8;
+    border: transparent;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    padding: 1em;
+    height: 100%;
+}
+
+.service-item {
+    flex: 1;;
+    max-width: 200%; 
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: rgba(255, 0, 0, 0.556);
+    border-radius: 8px;
+    text-align: center; 
+    color: pink;
+    border: 2px pink;
+    height: 100%; 
+}
+
+.service-item:hover {
+    transform: scale(1.3);
+    background-color: rgb(0, 217, 255);
+    color: rgb(0, 0, 0);
+}     
+
+.service-item:hover i {
+    transform: scale(1.2);
+    color: rgb(255, 255, 255);
+}
+
+.service-item i { 
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: rgb(255, 255, 255);  
+}
+ 
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.icons i {
+    transition: transform 0.3 ease, color .3s ease;
+}
+
+.icons i:hover {
+    transform: scale(1.5); 
+    color: rgb(254, 0, 0);
+}
